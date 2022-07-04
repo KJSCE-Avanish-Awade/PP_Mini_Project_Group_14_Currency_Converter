@@ -18,3 +18,11 @@ Tops.grid(row=0, column=0)
 headlabel = tk.Label(Tops, font=('lato black', 19, 'bold'), text='		Currency Converter',
 					bg='#e6e5e5', fg='black')
 headlabel.grid(row=1, column=0, sticky=W
+
+variable1 = tk.StringVar(gui)
+variable2 = tk.StringVar(gui)
+
+variable1.set("Currency")
+variable2.set("Currency")
+
+#Function To For Real Time Currency Conversion starts here
