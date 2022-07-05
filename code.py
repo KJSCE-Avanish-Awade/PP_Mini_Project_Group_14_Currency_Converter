@@ -42,3 +42,9 @@ def RealTimeCurrencyConversion():
 					"Currency Not Selected.\n Please select FROM and TO Currency form menu.")
 
 #clearing all the data entered by the user
+
+def clear_all():
+	Amount1_field.delete(0, tk.END)
+	Amount2_field.delete(0, tk.END)
+
+#GUI Layout
