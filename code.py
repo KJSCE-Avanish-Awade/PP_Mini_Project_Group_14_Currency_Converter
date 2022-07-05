@@ -48,3 +48,16 @@ def clear_all():
 	Amount2_field.delete(0, tk.END)
 
 #GUI Layout
+CurrenyCode_list = ["INR", "USD", "CAD", "CNY", "DKK", "EUR"]
+
+gui.configure(background='#e6e5e5')
+gui.geometry("700x440")
+
+Label_1 = Label(gui, font=('lato black', 27, 'bold"), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
+Label_1.grid(row=1, column=0, sticky=W)
+
+label1 = tk.label(gui, font=('lato black', 15, 'bold'), text="\t Amount : ", bg="#e6e5e5", fg="black")
+label1.grid(row=2, column=0, sticky=W)
+
+label1 = tk.label(gui, font=('lato black', 15, 'bold'), text="\t From Currency : ", bg="#e6e5e5", fg="black")
+label1.grid(row=3, column=0, sticky=w)
