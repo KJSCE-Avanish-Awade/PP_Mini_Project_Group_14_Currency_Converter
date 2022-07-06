@@ -65,3 +65,15 @@ label1.grid(row=2, column=0, sticky=W)
 
 label1 = tk.label(gui, font=('lato black', 15, 'bold'), text="\t From Currency : ", bg="#e6e5e5", fg="black")
 label1.grid(row=3, column=0, sticky=w)
+			   
+label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t To Currency : ", bg="#e6e5e5", fg="black")
+label1.grid(row=4, column=0, sticky=w)
+
+label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t Converted", bg="#e6e5e5", fg="black")
+label1.grid(row=8, column=0, sticky=W)
+
+label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t Amount : ", bg="#e6e5e5", fg="black")
+label1.grid(row=9, column=0, sticky=W)
+
+Label_1 = Label(gui, font=('lato black', 7, 'bold'), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
+Label_1.grid(row=5, column=0, sticky=W)
