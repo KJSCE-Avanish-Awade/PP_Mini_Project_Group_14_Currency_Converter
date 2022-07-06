@@ -91,3 +91,16 @@ Label_1.grid(row=5, column=0, sticky=W)
 
 Label_1 = Label(gui, font=('lato black', 7, 'bold'), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
 Label_1.grid(row=7, column=0, sticky=W)
+			 
+			
+romCurrency_option = tk.OptionMenu(gui, variable1, *CurrenyCode_list)
+ToCurrency_option = tk.OptionMenu(gui, variable2, *CurrenyCode_list)
+
+FromCurrency_option.grid(row=3, column=0, ipadx=45, sticky=E)
+ToCurrency_option.grid(row=4, column=0, ipadx=45, sticky=E)
+
+Amount1_field = tk.Entry(gui)
+Amount1_field.grid(row=2, column=0, ipadx=28, sticky=E)
+
+Amount2_field = tk.Entry(gui)
+Amount2_field.grid(row=8, column=0, ipadx=28, sticky=E)
