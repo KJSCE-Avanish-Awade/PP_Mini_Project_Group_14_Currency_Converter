@@ -39,7 +39,11 @@ def RealTimeCurrencyConversion():
 
 	elif (from_currency == "currency" or to_currency == "currency"):
 		tkinter.messagebox.showinfo("Error !!",
-					"Currency Not Selected.\n Please select FROM and TO Currency form menu.")
+									"Currency Not Selected.\n Please select FROM and TO Currency form menu.")
+	else:
+		new_amt = c.convert(from_currency, to_currency, float(Amount1_field.get()))
+		new_amount = float("{:.4f}".format(new_amt))
+		Amount2_field.insert(0, str(new_amount))
 
 #clearing all the data entered by the user
 
