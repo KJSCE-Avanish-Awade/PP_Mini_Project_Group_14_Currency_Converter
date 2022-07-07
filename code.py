@@ -57,17 +57,17 @@ CurrenyCode_list = ["INR", "USD", "CAD", "CNY", "DKK", "EUR"]
 gui.configure(background='#e6e5e5')
 gui.geometry("700x440")
 
-Label_1 = Label(gui, font=('lato black', 27, 'bold"), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
+Label_1 = Label(gui, font=('lato black', 27, 'bold'), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
 Label_1.grid(row=1, column=0, sticky=W)
 
-label1 = tk.label(gui, font=('lato black', 15, 'bold'), text="\t Amount : ", bg="#e6e5e5", fg="black")
+label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t Amount : ", bg="#e6e5e5", fg="black")
 label1.grid(row=2, column=0, sticky=W)
 
-label1 = tk.label(gui, font=('lato black', 15, 'bold'), text="\t From Currency : ", bg="#e6e5e5", fg="black")
-label1.grid(row=3, column=0, sticky=w)
-			   
+label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t From Currency : ", bg="#e6e5e5", fg="black")
+label1.grid(row=3, column=0, sticky=W)
+
 label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t To Currency : ", bg="#e6e5e5", fg="black")
-label1.grid(row=4, column=0, sticky=w)
+label1.grid(row=4, column=0, sticky=W)
 
 label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t Converted", bg="#e6e5e5", fg="black")
 label1.grid(row=8, column=0, sticky=W)
@@ -93,7 +93,7 @@ Label_1 = Label(gui, font=('lato black', 7, 'bold'), text="", padx=2, pady=2, bg
 Label_1.grid(row=7, column=0, sticky=W)
 			 
 			
-romCurrency_option = tk.OptionMenu(gui, variable1, *CurrenyCode_list)
+FromCurrency_option = tk.OptionMenu(gui, variable1, *CurrenyCode_list)
 ToCurrency_option = tk.OptionMenu(gui, variable2, *CurrenyCode_list)
 
 FromCurrency_option.grid(row=3, column=0, ipadx=45, sticky=E)
@@ -104,3 +104,18 @@ Amount1_field.grid(row=2, column=0, ipadx=28, sticky=E)
 
 Amount2_field = tk.Entry(gui)
 Amount2_field.grid(row=8, column=0, ipadx=28, sticky=E)
+			   
+Label_9 = Button(gui, font=('arial', 15, 'bold'), text=" Convert ", padx=2, pady=2, bg="blue", fg="white",
+				command=RealTimeCurrencyConversion)
+Label_9.grid(row=6, column=0)
+
+Label_1 = Label(gui, font=('lato black', 7, 'bold'), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
+Label_1.grid(row=10, column=0, sticky=W)
+
+Label_9 = Button(gui, font=('arial', 15, 'bold'), text=" Clear All ", padx=2, pady=2, bg="blue", fg="white",
+				command=clear_all)
+Label_9.grid(row=11, column=0)
+
+
+gui.mainloop()
+
