@@ -8,6 +8,7 @@ from tkinter import *
 import tkinter.messagebox
 
 #GUI Starts from here
+
 gui = tk.Tk()
 
 gui.title("Currency Converter")
@@ -28,6 +29,7 @@ variable2.set("Currency")
 #Function To For Real Time Currency Conversion starts here
 
 def RealTimeCurrencyConversion():
+	
 	from forex_python.converter import CurrencyRates
 	c = CurrencyRates()
 
@@ -52,6 +54,7 @@ def clear_all():
 	Amount2_field.delete(0, tk.END)
 
 #GUI Layout
+
 CurrenyCode_list = ["INR", "USD", "CAD", "CNY", "DKK", "EUR"]
 
 gui.configure(background='#e6e5e5')
@@ -77,22 +80,10 @@ label1.grid(row=9, column=0, sticky=W)
 
 Label_1 = Label(gui, font=('lato black', 7, 'bold'), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
 Label_1.grid(row=5, column=0, sticky=W)
-label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t To Currency : ", bg="#e6e5e5", fg="black")
-label1.grid(row=4, column=0, sticky=W)
-
-label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t Converted", bg="#e6e5e5", fg="black")
-label1.grid(row=8, column=0, sticky=W)
-
-label1 = tk.Label(gui, font=('lato black', 15, 'bold'), text="\t Amount : ", bg="#e6e5e5", fg="black")
-label1.grid(row=9, column=0, sticky=W)
-
-Label_1 = Label(gui, font=('lato black', 7, 'bold'), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
-Label_1.grid(row=5, column=0, sticky=W)
 
 Label_1 = Label(gui, font=('lato black', 7, 'bold'), text="", padx=2, pady=2, bg="#e6e5e5", fg="black")
 Label_1.grid(row=7, column=0, sticky=W)
 			 
-			
 FromCurrency_option = tk.OptionMenu(gui, variable1, *CurrenyCode_list)
 ToCurrency_option = tk.OptionMenu(gui, variable2, *CurrenyCode_list)
 
@@ -115,7 +106,6 @@ Label_1.grid(row=10, column=0, sticky=W)
 Label_9 = Button(gui, font=('arial', 15, 'bold'), text=" Clear All ", padx=2, pady=2, bg="blue", fg="white",
 				command=clear_all)
 Label_9.grid(row=11, column=0)
-
 
 gui.mainloop()
 
